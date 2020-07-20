@@ -14,7 +14,7 @@ const Home = () => {
     // eslint-disable-next-line
   }, []);
   return (
-    <div className="landing-page">
+    <div className="new-home-page">
       <div className="main-bin">
         <div className="logo-div">
           <img src={Logo} alt="convenienC Logo" className="logo-interior" />

@@ -5,6 +5,26 @@
 
 .stores:hover {
   background-color: rgba(202, 234, 255, 0.63);
+  border-radius: 20px;
   bottom: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.business-icon {
+  color: green;
+}
+
+.business-name {
+  color: purple;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.phone-icon {
+  color: grey;
+  padding-right: 10px;
+}
+
+.pin-icon {
+  color: red;
 }

@@ -10,6 +10,7 @@ import Detail from './components/pages/Detail';
 import Alerts from './components/layout/Alerts';
 import PrivateRoute from './components/routing/PrivateRoute';
 import BusinessVerification from './components/pages/BusinessVerification';
+import LandingPage from './components/pages/LandingPage';
 
 import ProfileState from './context/profile/ProfileState';
 import AuthState from './context/auth/AuthState';
@@ -23,29 +24,37 @@ if (localStorage.token) {
 
 const App = () => {
   return (
-  <AuthState>
-  <ProfileState>
-  <AlertState>
-    <Router>
-      <Fragment>
-        <Navbar />
-          <div className="container">
-          <Alerts />
-            <Switch>
-              <PrivateRoute exact path='/' component={Home} />
-              <Route exact path='/about' component={About} />
-              <Route exact path='/register' component={Register} />
-              <Route exact path='/businessVerification' component={BusinessVerification} />
-              <Route exact path='/login' component={Login} /> 
-              <Route exact path="/profile" component={Profile}/>
-              <Route exact path="/detail/:id" component={Detail}/>
-            </Switch>
-          </div>
-      </Fragment>
-    </Router>
-    </AlertState>
-  </ProfileState>
-  </AuthState>
+
+    <AuthState>
+      <ProfileState>
+        <AlertState>
+          <Router>
+            <Fragment>
+              <Navbar />
+              <div className="container">
+                <Alerts />
+                <Switch>
+                  <PrivateRoute exact path="/home" component={Home} />
+                  <Route exact path="/" component={LandingPage} />
+                  <Route exact path="/about" component={About} />
+                  <Route exact path="/register" component={Register} />
+                  <Route
+                    exact
+                    path="/businessVerification"
+                    component={BusinessVerification}
+                  />
+
+                  <Route exact path="/login" component={Login} />
+                  <Route exact path="/profile" component={Profile} />
+                  <Route exact path="/detail/:id" component={Detail} />
+                </Switch>
+              </div>
+            </Fragment>
+          </Router>
+        </AlertState>
+      </ProfileState>
+    </AuthState>
+
   );
 };
 

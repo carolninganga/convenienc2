@@ -190,7 +190,7 @@ class Profile extends Component {
                   </a>
                 </div>
                 <div className="btn-div">
-                  <a href="/" type="submit" className="signUpBtn2">
+                  <a href="/home" type="submit" className="signUpBtn2">
                     Home
                   </a>
                 </div>
