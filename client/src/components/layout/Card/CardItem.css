@@ -1,0 +1,10 @@
+.stores {
+  background-color: rgba(147, 212, 255, 0.534);
+  border-radius: 10px;
+}
+
+.stores:hover {
+  background-color: rgba(202, 234, 255, 0.63);
+  bottom: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

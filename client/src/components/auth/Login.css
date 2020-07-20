@@ -1,0 +1,84 @@
+.home-page {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      rgb(83, 46, 126)
+    ),
+    url('../../store.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-bin {
+  background-color: white;
+  /* height: 100vh; */
+  max-width: 90%;
+  margin: auto;
+  margin-top: 10%;
+  padding: 20px;
+  border-radius: 30px;
+  border-color: rgb(83, 46, 126);
+  border-style: solid;
+}
+
+.logo-interior {
+  width: 40%;
+  animation: pulse 5s forwards;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.logo-div {
+  text-align: right;
+}
+
+.input-form {
+  background-color: white;
+  /* max-width: 60%; */
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  padding: 20px;
+  border-radius: 30px;
+  border-color: rgb(83, 46, 126);
+  border-style: solid;
+}
+
+.signUpBtn:hover {
+  transform: translate(0px, 2px);
+  letter-spacing: 0.1em;
+  border-radius: 40px;
+  background: var(--gradient-color);
+}
+.signUpBtn {
+  background-image: linear-gradient(45deg, salmon, yellow);
+  background-color: salmon;
+  color: rgb(83, 46, 126);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: medium;
+  width: 50%;
+  float: right;
+}
+.signUpBtn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+input {
+  border-radius: 5px;
+}
