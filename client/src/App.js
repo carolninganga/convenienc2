@@ -10,6 +10,7 @@ import Detail from './components/pages/Detail';
 import Alerts from './components/layout/Alerts';
 import PrivateRoute from './components/routing/PrivateRoute';
 import BusinessVerification from './components/pages/BusinessVerification';
+import LandingPage from './components/pages/LandingPage';
 
 import ProfileState from './context/profile/ProfileState';
 import AuthState from './context/auth/AuthState';
@@ -32,7 +33,8 @@ const App = () => {
               <div className="container">
                 <Alerts />
                 <Switch>
-                  <PrivateRoute exact path="/" component={Home} />
+                  <PrivateRoute exact path="/home" component={Home} />
+                  <Route exact path="/" component={LandingPage} />
                   <Route exact path="/about" component={About} />
                   <Route exact path="/register" component={Register} />
                   <Route
