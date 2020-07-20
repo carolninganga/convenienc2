@@ -62,15 +62,6 @@ const Card = () => {
       {profiles !== null && !loading ? (
         <TransitionGroup>
           <div style={gridContainerStyle}>
-            {/* {searchTerm !== ""? searchedResult.map(profile => (
-              <CSSTransition
-              key={profile._id}
-              timeout={500}
-              classNames="item"
-            >
-              <CardItem profile={profile} />
-            </CSSTransition> 
-            )) :  */}
                {searchedResult.map(profile => (
                   <CSSTransition
                     key={profile._id}

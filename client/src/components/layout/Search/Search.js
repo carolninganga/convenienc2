@@ -23,16 +23,16 @@ class Search extends Component {
           name="searchTerm"
           value={this.props.searchTerm}
           onChange={this.props.handleChange}
-          placeholder="Business Name"
+          placeholder="Search by business name, zipcode, grocery item"
           aria-label="Business Name"
           aria-describedby="button-addon2"
         />
 
-        <div className="input-group-append">
+        {/* <div className="input-group-append">
           <button className="btn btn-outline-secondary" onClick={this.handleFormSubmit} type="button" id="button-addon2">
             Search
           </button>
-        </div>
+        </div> */}
         </div>
    </>
       

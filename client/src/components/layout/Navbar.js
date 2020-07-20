@@ -26,7 +26,7 @@ const Navbar = ({ title, icon }) => {
     <Fragment>
       <li className="mr-3">
         <Link to="/profile" className="btn btn-success">
-          <i class="fas fa-user-edit"></i> Profile
+          <i class="fas fa-user-edit"></i> Business Profile
         </Link>
       </li>
 

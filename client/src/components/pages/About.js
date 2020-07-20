@@ -25,21 +25,33 @@ const About = () => {
         <div className="row">
           <div className="col-4">
             <img className="bio-img" src={Caroline} />
-            <h2>Caroline</h2>
+            <h2 class="animate__animated animate__bounce">Caroline</h2>
             <p>
               Caroline is a rockstar full-stack web developer and master of
               boilerplate.
             </p>
+            <div className="buttongit center">
+            <button className="btnb"><a href="https://github.com/carolninganga">github<i class="fab fa-github"></i> </a>
+            </button>
+            </div>
           </div>
           <div className="col-4">
             <img className="bio-img" src={Abir} />
             <h2>Abir</h2>
             <p>Abir is a full-stack web developer and refactoring wiz.</p>
+            <div className="buttongit center">
+            <button className="btnb"><a href="https://github.com/abiryusuf">github<i class="fab fa-github"></i> </a>
+            </button>
+            </div>
           </div>
           <div className="col-4">
             <img className="bio-img" src={Nick} />
             <h2>Nick</h2>
-            <p>Nick is a full-stack web developer and css sleuth.</p>
+            <p>Nick is a full-stack web developer, css sleuth and guru.</p>
+            <div className="buttongit center">
+            <button className="btnb"><a href="https://github.com/bombichino">github<i class="fab fa-github"></i> </a>
+            </button>
+            </div>
           </div>
         </div>
       </div>
@@ -48,3 +60,4 @@ const About = () => {
 };
 
 export default About;
+
