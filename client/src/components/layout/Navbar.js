@@ -14,7 +14,7 @@ const Navbar = ({ title, icon }) => {
 
   useEffect(() => {
     loadUser();
-    // eslint-disable-next-line
+    
   }, []);
 
 
