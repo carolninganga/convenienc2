@@ -24,6 +24,7 @@ if (localStorage.token) {
 
 const App = () => {
   return (
+
     <AuthState>
       <ProfileState>
         <AlertState>
@@ -53,6 +54,7 @@ const App = () => {
         </AlertState>
       </ProfileState>
     </AuthState>
+
   );
 };
 

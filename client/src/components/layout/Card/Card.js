@@ -1,9 +1,10 @@
-import React, { Fragment, useContext, useEffect } from 'react';
+import React, { Fragment, useContext, useEffect, useState } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import ProfileContext from '../../../context/profile/profileContext';
 import CardItem from './CardItem';
 import Spinner from '../Spinner';
-import { GridColumn } from 'semantic-ui-react';
+import Search from '../Search/Search'
+// import { GridColumn } from 'semantic-ui-react';
 
 const gridContainerStyle = {
   display: 'grid',
@@ -16,11 +17,29 @@ const Card = () => {
   const profileContext = useContext(ProfileContext);
 
   const { profiles, filtered, getProfiles, loading } = profileContext;
+  
+  const [ data, setData ] = useState([]); 
+  const [ results, setResults ] = useState([]);
+  const [ searchTerm, setSearchTerm ] = useState('');
+
 
   useEffect(() => {
-    getProfiles();
+
+    getProfiles().then(res => {
+      setData(res.data)
+      setResults(res.data)
+    });
     // eslint-disable-next-line
   }, []);
+
+  const handleChange = event => {
+    // console.log('test', event.target.value)
+    const value = event.target.value;
+    setSearchTerm(value)
+    
+  }
+
+
 
   if (profiles !== null && profiles.length === 0 && !loading) {
     return <h4>Please add a profile</h4>;
@@ -30,25 +49,12 @@ const Card = () => {
 
   return (
     <Fragment>
-      <div class="input-group mb-3">
-        <input
-          type="text"
-          className="form-control filter-field"
-          placeholder="Business Name"
-          aria-label="Business Name"
-          aria-describedby="button-addon2"
-        />
-        <div className="input-group-append">
-          <button className="searchBtn" type="button" id="button-addon2">
-            Search
-          </button>
-        </div>
-      </div>
+      <Search searchTerm={searchTerm} handleChange={handleChange} />
       {profiles !== null && !loading ? (
         <TransitionGroup>
           <div style={gridContainerStyle}>
-            {filtered !== null
-              ? filtered.map(profile => (
+            {results !== null
+              ? results.map(profile => (
                   <CSSTransition
                     key={profile._id}
                     timeout={500}
