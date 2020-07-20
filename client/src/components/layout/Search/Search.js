@@ -1,40 +1,19 @@
 
 import React, { Component } from 'react';
-import API from './API'
 
-class App extends Component {
 
-  state = {
-    allUsers: [],
-    filteredResults: [],
-    searchTerm: ""
-  }
+class Search extends Component {
 
-  componentDidMount() {
-    API.getUsers()
-    // .then(res => {
-    //   console.log(res)
-    // })
-    .then(users => {
-      this.setState({
-        allUsers: users.data,
-        filteredResults: users.data
-      })
-    })
-  }
 
-  handleInputChange = event => {
-    const name = event.target.name;
-    const value = event.target.value;
-    this.setState({
-      [name]: value
-    });
-  };
+  
 
   handleFormSubmit = e => {
-    e.preventdefault()
-    const searchTerm = e.target.value;
+   
+    e.preventDefault();
+    const searchTerm = this.state.searchTerm;
+    //console.log("23", this.state.allUsers)
     const newFilteredUsers = this.state.allUsers.filter(user => user.name.indexOf(searchTerm)>=0 || user.phone.indexOf(searchTerm)>=0 || user.city.indexOf(searchTerm)>=0 || user.zipcode.indexOf(searchTerm)>=0 || user.item1.indexOf(searchTerm)>=0 || user.item2.indexOf(searchTerm)>=0);
+    console.log('23', newFilteredUsers)
     this.setState({filteredResults: newFilteredUsers})
   }
 
@@ -46,8 +25,8 @@ class App extends Component {
           type="text"
           className="form-control filter-field"
           name="searchTerm"
-          value={this.state.searchTerm}
-          onChange={this.handleInputChange}
+          value={this.props.searchTerm}
+          onChange={this.props.handleChange}
           placeholder="Business Name"
           aria-label="Business Name"
           aria-describedby="button-addon2"
@@ -66,7 +45,7 @@ class App extends Component {
 
 }
 
-export default App;
+export default Search;
 
 
 

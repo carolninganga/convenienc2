@@ -19,7 +19,7 @@ const Home = () => {
         <div className="logo-div">
           <img src={Logo} alt="convenienC Logo" className="logo-interior" />
         </div>
-        <Search />
+        {/* <Search /> */}
         <Card />
       </div>
     </div>

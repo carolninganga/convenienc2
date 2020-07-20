@@ -31,8 +31,9 @@ const ProfileState = props => {
     const getProfiles = async profile => { 
         try {
             const res = await axios.get('/api/profile'); 
-            console.log(res);
+           
             dispatch({ type: GET_PROFILES, payload: res.data })
+            return res;
         } catch (err) {
             dispatch({ type: PROFILE_ERROR, payload: err.response.msg})
         }       
