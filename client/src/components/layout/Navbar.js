@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import AuthContext from '../../context/auth/authContext';
 import ContactContext from '../../context/profile/profileContext';
+import './Navbar.css';
+import Logo from './logo.PNG';
 
 const Navbar = ({ title, icon }) => {
-
   const authContext = useContext(AuthContext);
   const contactContext = useContext(ContactContext);
 
@@ -17,21 +18,26 @@ const Navbar = ({ title, icon }) => {
     // eslint-disable-next-line
   }, []);
 
-
-
   const onLogout = () => {
     logout();
   };
 
   const authLinks = (
     <Fragment>
-      <li className="mr-3"><Link to='/profile' className="btn btn-success"><i class="fas fa-user-edit"></i> Profile</Link></li>
+      <li className="mr-3">
+        <Link to="/profile" className="btn btn-success">
+          <i class="fas fa-user-edit"></i> Profile
+        </Link>
+      </li>
 
-      <li>Hello {user && user.name}</li>
+      <li>| Hello {user && user.name} |</li>
       <li>
-        <a onClick={onLogout} href='#!'>
-          <i className='fas fa-sign-out-alt' />{' '}
-          <span className='hide-sm'>Logout</span>
+        <Link to="/about">| About |</Link>
+      </li>
+      <li>
+        <a onClick={onLogout} href="#!">
+          <i className="fas fa-sign-out-alt" />{' '}
+          <span className="hide-sm">Logout</span>
         </a>
       </li>
     </Fragment>
@@ -39,27 +45,31 @@ const Navbar = ({ title, icon }) => {
 
   const guestLinks = (
     <Fragment>
-          <li>
-        <Link to='/login'>Login</Link>
+      <li>
+        <Link to="/login">| Login |</Link>
       </li>
       <li>
-        <Link to='/register'>Register</Link>
+        <Link to="/register">| Register |</Link>
       </li>
       <li>
-        <Link to='/about'>About</Link>
+        <Link to="/about">| About |</Link>
       </li>
     </Fragment>
   );
 
   return (
-    <divs className='navbar bg-primary'>
-      <h1>
-        <Link to='/'>
-          <i className={icon} /> {title}
-        </Link>
-      </h1>
-      <ul style={{marginBottom:'0rem'}}>{isAuthenticated ? authLinks : guestLinks}</ul>
-    </divs>
+    <div>
+      <divs className="navbar">
+        <h1>
+          <Link to="/">
+            <img className="main-logo" src={Logo} alt="logo" />
+          </Link>
+        </h1>
+        <ul style={{ marginBottom: '0rem' }}>
+          {isAuthenticated ? authLinks : guestLinks}
+        </ul>
+      </divs>
+    </div>
   );
 };
 

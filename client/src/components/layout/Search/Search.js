@@ -1,59 +1,66 @@
+
 import React, { Component } from 'react';
-import ProfileState, { getProfiles } from '../../../context/profile/ProfileState';
-import PropTypes from 'prop-types';
-
-export default class Search extends Component {
-    state ={
-        searchItem: ""
-    }
-
-    componentDidMountz() {
-        this.props.getProfiles()   
-    }
-
-    handleInputChange = e => {
-        searchItem = e.target.value;
-    }
-
-    handleSubmit = e => {
-        e.preventdefault()
-        searchItem = e.target.value;
-        this.setState({ searchItem: e.target.value})
-        const filteredItems = items.filterz((item) => item.name.includes(this.state.searchItem))
-    }
 
 
-    render() {
-        return (
-            <div>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" />
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-                    </div>
-                    </div>
-                    {profiles.map((_id, name, phone, city, zipcode, item1, item2, bio }) => (
-                        <ul key={_id}>
-                            <li>{name}</li>
-                            <li>{phone}</li>
-                            <li>{city}</li>
-                            <li>{zipcode}</li>
-                            <li>{item1}</li>
-                            <li>{item2}</li>
-                            <li>{bio}</li>
-                        </ul>
-                    )}
-            </div>
-        )
-    }
+class Search extends Component {
+
+
+  
+
+  handleFormSubmit = e => {
+   
+    e.preventDefault();
+    const searchTerm = this.state.searchTerm;
+    //console.log("23", this.state.allUsers)
+    const newFilteredUsers = this.state.allUsers.filter(user => user.name.indexOf(searchTerm)>=0 || user.phone.indexOf(searchTerm)>=0 || user.city.indexOf(searchTerm)>=0 || user.zipcode.indexOf(searchTerm)>=0 || user.item1.indexOf(searchTerm)>=0 || user.item2.indexOf(searchTerm)>=0);
+    console.log('23', newFilteredUsers)
+    this.setState({filteredResults: newFilteredUsers})
+  }
+
+  render() {
+    return (
+      <>
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          className="form-control filter-field"
+          name="searchTerm"
+          value={this.props.searchTerm}
+          onChange={this.props.handleChange}
+          placeholder="Business Name"
+          aria-label="Business Name"
+          aria-describedby="button-addon2"
+        />
+
+        <div className="input-group-append">
+          <button className="btn btn-outline-secondary" onClick={this.handleFormSubmit} type="button" id="button-addon2">
+            Search
+          </button>
+        </div>
+        </div>
+   </>
+      
+    );
+  }
+
 }
 
-Directory.propTypes = { 
-getProfiles: PropTypes.func.isRequired,
-profile: PropTypes.object.isRequired }
-
-const mapStateToprops = (state) => ({
-profile: state.profile
-})
-
 export default Search;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
