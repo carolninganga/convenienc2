@@ -1,8 +1,10 @@
 import React, { useContext, useEffect } from 'react';
 import AuthContext from '../../context/auth/authContext';
 import Card from '../layout/Card/Card';
+import Search from '../layout/Search/Search';
 import './Home.css';
 import Logo from '../layout/logo.PNG';
+// import { Search } from 'semantic-ui-react';
 
 const Home = () => {
   const authContext = useContext(AuthContext);
@@ -17,6 +19,7 @@ const Home = () => {
         <div className="logo-div">
           <img src={Logo} alt="convenienC Logo" className="logo-interior" />
         </div>
+        <Search />
         <Card />
       </div>
     </div>

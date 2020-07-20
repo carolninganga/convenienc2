@@ -30,20 +30,6 @@ const Card = () => {
 
   return (
     <Fragment>
-      <div class="input-group mb-3">
-        <input
-          type="text"
-          className="form-control filter-field"
-          placeholder="Business Name"
-          aria-label="Business Name"
-          aria-describedby="button-addon2"
-        />
-        <div className="input-group-append">
-          <button className="searchBtn" type="button" id="button-addon2">
-            Search
-          </button>
-        </div>
-      </div>
       {profiles !== null && !loading ? (
         <TransitionGroup>
           <div style={gridContainerStyle}>

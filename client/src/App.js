@@ -23,36 +23,6 @@ if (localStorage.token) {
 
 const App = () => {
   return (
-<<<<<<< HEAD
-    <AuthState>
-      <ProfileState>
-        <AlertState>
-          <Router>
-            <Fragment>
-              <Navbar />
-              <div className="container">
-                <Alerts />
-                <Switch>
-                  <PrivateRoute exact path="/" component={Home} />
-                  <Route exact path="/about" component={About} />
-                  <Route exact path="/register" component={Register} />
-                  <Route
-                    exact
-                    path="/businessVerification"
-                    component={BusinessVerification}
-                  />
-
-                  <Route exact path="/login" component={Login} />
-                  <Route exact path="/profile" component={Profile} />
-                  <Route exact path="/detail/:id" component={Detail} />
-                </Switch>
-              </div>
-            </Fragment>
-          </Router>
-        </AlertState>
-      </ProfileState>
-    </AuthState>
-=======
   <AuthState>
   <ProfileState>
   <AlertState>
@@ -76,7 +46,6 @@ const App = () => {
     </AlertState>
   </ProfileState>
   </AuthState>
->>>>>>> master
   );
 };
 
