@@ -1,5 +1,5 @@
 
-# Mphavu Mode
+# ConvenienC
 
 ## Description
 A Full Stack MERN application that allows Businesses to share their profile and update customer of current available essential products.
