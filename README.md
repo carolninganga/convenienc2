@@ -31,8 +31,6 @@ npm i
 ## Contributing 
 Caroline Ning'ang'a, Nick Bombicino, Abir Yusuf
 
-## License
-
 
 ## Link to project URL
 https://convenienc.herokuapp.com/
