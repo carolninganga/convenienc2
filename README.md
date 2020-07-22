@@ -6,6 +6,7 @@
 <img width="1319" alt="3" src="https://user-images.githubusercontent.com/33443452/88189166-c24e4180-cc06-11ea-8fc1-5158076005fb.png">
 <img width="1231" alt="4" src="https://user-images.githubusercontent.com/33443452/88189169-c37f6e80-cc06-11ea-9f2c-3fea3badd8c2.png">
 <img width="1373" alt="5" src="https://user-images.githubusercontent.com/33443452/88189174-c5493200-cc06-11ea-8e9a-6b69068a7a7f.png">
+<img width="1365" alt="Screen Shot 2020-07-22 at 10 41 55 AM" src="https://user-images.githubusercontent.com/33443452/88190364-3210fc00-cc08-11ea-894d-f21b6b1ed4ac.png">
 
 
 ## Description
