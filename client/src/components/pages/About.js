@@ -3,9 +3,7 @@ import Team from '../layout/Team/Team';
 import ReactContactForm from 'react-mail-form';
 import Footer from '../layout/Footer/Footer';
 import './About.css';
-import Nick from './Nick.jpeg';
 import Caroline from './Caroline.jpeg';
-import Abir from './Abir.jpeg';
 
 const About = () => {
   return (
@@ -35,23 +33,12 @@ const About = () => {
             </button>
             </div>
           </div>
-          <div className="col-4">
-            <img className="bio-img" src={Abir} />
-            <h2>Abir</h2>
-            <p>Abir is a full-stack web developer and refactoring wiz.</p>
-            <div className="buttongit center">
-            <button className="btnb"><a href="https://github.com/abiryusuf">github<i class="fab fa-github"></i> </a>
-            </button>
-            </div>
-          </div>
-          <div className="col-4">
-            <img className="bio-img" src={Nick} />
-            <h2>Nick</h2>
-            <p>Nick is a full-stack web developer, css sleuth and guru.</p>
-            <div className="buttongit center">
-            <button className="btnb"><a href="https://github.com/bombichino">github<i class="fab fa-github"></i> </a>
-            </button>
-            </div>
+          
+          <div className="col-8">
+            <h2>Contact Me</h2>
+
+            
+          
           </div>
         </div>
       </div>
