@@ -28,7 +28,7 @@ export default class ContactUs extends Component {
         console.log("test");
         Axios.post('/api/contact-us/send', this.state).then(function(res){
             // console.log(res);
-            alert("Your message has been sent to the Foodie Team!")
+            alert("Your message has been sent to the ConvenienC Team!")
 
         }).catch(function(err){
             console.log(err);

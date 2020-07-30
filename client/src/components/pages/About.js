@@ -4,6 +4,7 @@ import ReactContactForm from 'react-mail-form';
 import Footer from '../layout/Footer/Footer';
 import './About.css';
 import Caroline from './Caroline.jpeg';
+import ContactUs from '../layout/ContactUs/ContactUs'
 
 const About = () => {
   return (
@@ -36,9 +37,7 @@ const About = () => {
           
           <div className="col-8">
             <h2>Contact Me</h2>
-
-            
-          
+            <ContactUs />
           </div>
         </div>
       </div>
