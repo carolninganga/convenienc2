@@ -6,8 +6,8 @@ var nodemailer = require('nodemailer');
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: "cindywhite29090@gmail.com",
-      pass: "Madda2010"
+      user: "convinienc@gmail.com",
+      pass: "Tanya007"
     }
   });
 
@@ -21,7 +21,7 @@ router.post('/send', (req, res, next) => {
 
   var mail = {
     from: name,
-    to: 'cindywhite29090@gmail.com',
+    to: 'convinienc@gmail.com',
     subject: 'New Message from Contact Form',
     text: content
   }
@@ -34,7 +34,7 @@ router.post('/send', (req, res, next) => {
       console.log(err);
     } else {
       res.json({
-       status: 'success! message was sent to the Foodie Team!'
+       status: 'success! message was sent to the ConvenienC Team!'
       })
     }
   });

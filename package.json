@@ -1,5 +1,5 @@
 {
-  "name": "react-skillshare-squad",
+  "name": "react-convenienc",
   "version": "1.0.0",
   "description": "skillsharesquad - exchange and share skills",
   "main": "server.js",
@@ -18,15 +18,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.heroku.com/react-skillshare-squad.git"
+    "url": "https://git.heroku.com/react-convenienc.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PhoebeYahengWu/react-skillshare-squad/issues"
+    "url": "https://github.com/PhoebeYahengWu/react-convenienc/issues"
   },
-  "homepage": "https://github.com/PhoebeYahengWu/react-skillshare-squad#readme",
+  "homepage": "https://github.com/PhoebeYahengWu/react-convenienc#readme",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "animate.css": "^4.1.0",
