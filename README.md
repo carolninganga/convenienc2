@@ -18,6 +18,7 @@ Built in response to Covid19 when products would run out from the shelves of bra
 - React Redux
 - BootStrap
 - JavaScript
+- NodeMailer
 
 
 
